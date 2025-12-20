@@ -1,0 +1,59 @@
+[3_3_W_10_OrigamiAnts SoundNodeWave]
+Subtitles[0]=(Text="He even thinks things.")
+
+[3_3_W_1_OrigamiAnts SoundNodeWave]
+Subtitles[0]=(Text="We're saved!")
+
+[3_3_W_2_OrigamiAnt SoundNodeWave]
+Subtitles[0]=(Text="For how long?")
+
+[3_3_W_3_OrigamiAnts SoundNodeWave]
+Subtitles[0]=(Text="Is she the Chosen One?")
+
+[3_3_W_4_OrigamiAnt SoundNodeWave]
+Subtitles[0]=(Text="Our savior?")
+
+[3_3_W_5_OrigamiAnts SoundNodeWave]
+Subtitles[0]=(Text="Our benefactor!")
+
+[3_3_W_6_OrigamiAnts SoundNodeWave]
+Subtitles[0]=(Text="It's Alice! The magnificent, the powerful, the brave, the reckless, the rash, the crazy, the imprudent!")
+
+[3_3_W_7_OrigamiAnt SoundNodeWave]
+Subtitles[0]=(Text="Speak with the Elder.")
+
+[3_3_W_8_OrigamiAnts SoundNodeWave]
+Subtitles[0]=(Text="Yes, you really must.")
+
+[3_3_W_9_OrigamiAnts SoundNodeWave]
+Subtitles[0]=(Text="He knows things.")
+
+[3_5_D_OrigamiAnt SoundNodeWave]
+Subtitles[0]=(Text="We're saved!")
+
+[3_7_D_OrigamiAnts SoundNodeWave]
+Subtitles[0]=(Text="Once more, the shadow dragon winds along the path. Follow the dragon, Alice.")
+
+[3_7_J_OrigamiAnts SoundNodeWave]
+Subtitles[0]=(Text="It's not enough that they abuse and murder us; they let their spawn feed on our rotting corpses.")
+
+[AntChant_Layer_1 SoundNodeWave]
+Subtitles[0]=(Text="Oh mighty Lepidoptera, oh sleeper in the mountain,")
+Subtitles[1]=(Text="Many-legged lord of the lake and peak, divine benefactor, ",Time=3.000000)
+Subtitles[2]=(Text="Protector of the frog and tree, on your humble ants look kindly.",Time=7.000000)
+
+[AntChant_Layer_2 SoundNodeWave]
+Subtitles[0]=(Text="Oh mighty Lepidoptera, oh sleeper in the mountain,")
+Subtitles[1]=(Text="Many-legged lord of the lake and peak, divine benefactor, ",Time=3.000000)
+Subtitles[2]=(Text="Protector of the frog and tree, on your humble ants look kindly.",Time=7.000000)
+
+[AntChant_Layer_3 SoundNodeWave]
+Subtitles[0]=(Text="Oh mighty Lepidoptera, oh sleeper in the mountain,")
+Subtitles[1]=(Text="Many-legged lord of the lake and peak, divine benefactor, ",Time=3.000000)
+Subtitles[2]=(Text="Protector of the frog and tree, on your humble ants look kindly.",Time=7.000000)
+
+[Ants_Chant_Group SoundNodeWave]
+Subtitles[0]=(Text="Oh mighty Lepidoptera, oh sleeper in the mountain,")
+Subtitles[1]=(Text="Many-legged lord of the lake and peak, divine benefactor, ",Time=3.000000)
+Subtitles[2]=(Text="Protector of the frog and tree, on your humble ants look kindly.",Time=7.000000)
+

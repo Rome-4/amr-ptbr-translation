@@ -1,0 +1,15 @@
+[1_2_AD_Rabbit SoundNodeWave]
+Subtitles[0]=(Text="Come, Alice! Don't dawdle! There's no time to waste. There's no time at all. You've already missed the train!")
+
+[Rabbit_ChallengeCave_01 SoundNodeWave]
+Subtitles[0]=(Text="Come Alice! Don't dawdle!")
+
+[Rabbit_ChallengeCave_02 SoundNodeWave]
+Subtitles[0]=(Text="There's no time to waste!")
+
+[Rabbit_ChallengeCave_03 SoundNodeWave]
+Subtitles[0]=(Text="There's no time at all!")
+
+[Rabbit_ChallengeCave_04 SoundNodeWave]
+Subtitles[0]=(Text="You've already missed the train!")
+

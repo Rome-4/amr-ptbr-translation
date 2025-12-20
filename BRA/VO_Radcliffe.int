@@ -1,0 +1,27 @@
+[3_1_4_A_Lawyer SoundNodeWave]
+Subtitles[0]=(Text="Yes? Who is it?")
+
+[3_1_4_C_Lawyer SoundNodeWave]
+Subtitles[0]=(Text="Aah, you're back. I suppose you better come up. Mind the latch.")
+
+[3_1_4_D_Lawyer SoundNodeWave]
+Subtitles[0]=(Text="Well, Alice... I've been worried...")
+
+[3_1_4_F_Lawyer SoundNodeWave]
+Subtitles[0]=(Text="Forgotten your manners. And what else I wonder? You abandoned it at Rutledge Asylum, my dear. We've been over this before.")
+
+[3_1_6_A_Lawyer SoundNodeWave]
+Subtitles[0]=(Text="You should leave now, Alice. We can pretend this never happened.")
+
+[3_1_6_C_Lawyer SoundNodeWave]
+Subtitles[0]=(Text="Keep your distance. What you've got may be catching.")
+
+[3_1_AK_Lawyer SoundNodeWave]
+Subtitles[0]=(Text="Alice, my time is worth something. Come up, please!")
+
+[5_1_6_D_Lawyer SoundNodeWave]
+Subtitles[0]=(Text="You look decent enough, but appearances deceive. I know you for an unstable and violent person. I can't say I'm surprised you've been incarcerated in the asylum again. A long stay under supervision would serve you right. ")
+
+[5_1_AS_Lawyer SoundNodeWave]
+Subtitles[0]=(Text="No respect for the niceties of my profession!\n Bright enough, I'm sure. But flighty. \nYou lack rigor. Not your father's daughter.\n You make no sense and blame others for it! \nA danger to yourself, and others!")
+

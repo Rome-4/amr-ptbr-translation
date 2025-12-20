@@ -1,0 +1,24 @@
+[3_1_1_B2_6_FireOnLooker SoundNodeWave]
+Subtitles[0]=(Text="Should we stand so close?")
+
+[3_1_1_B2_7_FireOnLooker SoundNodeWave]
+Subtitles[0]=(Text="Nothing more we can do.")
+
+[3_1_1_B2_8_FireOnLooker SoundNodeWave]
+Subtitles[0]=(Text="It'll burn to the ground.")
+
+[3_1_1_B_1_FireOnlooker SoundNodeWave]
+Subtitles[0]=(Text="What heat! Surely they all perished.")
+
+[3_1_1_B_2_FireOnlooker SoundNodeWave]
+Subtitles[0]=(Text="Poor souls, 'orrible way to go.")
+
+[3_1_1_B_3_FireOnlooker SoundNodeWave]
+Subtitles[0]=(Text="Such a blaze!")
+
+[3_1_1_B_4_FireOnlooker SoundNodeWave]
+Subtitles[0]=(Text="Can we help?")
+
+[3_1_1_B_5_FireOnlooker SoundNodeWave]
+Subtitles[0]=(Text="Stay back, it's about to go!")
+
