@@ -36,8 +36,8 @@ if not exist "%ENG%\INT_BKP" (
 )
 
 :: Copying the translated .int files
-echo Applying translation files...
-xcopy /y "%BRA%\*.int" "%ENG%\INT"
+::echo Applying translation files...
+::xcopy /y "%BRA%\*.int" "%ENG%\INT"
 
 :: Iterate all *_LOC_INT.upk files
 for /R "%TRANSLATION%" %%F in (*_LOC_INT.upk) do (
