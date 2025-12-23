@@ -1,88 +1,88 @@
 [1_1_0_HoundsditchKids_sandman SoundNodeWave]
-Subtitles[0]=(Text="The Sandman's coming in his train of cars, with moonbeam windows and with wheels of stars. ")
-Subtitles[1]=(Text="So hush you little ones and have no fear, the man in the moon, he is the engineer.",Time=6.000000)
+Subtitles[0]=(Text="O Homem da Areia está vindo em seus vagões brilhantes. Assentos confortáveis e rodas cintilantes.")
+Subtitles[1]=(Text="Então silêncio, pequeninos, não há o que temer. O homem na Lua é o condutor a reger.",Time=6.000000)
 
 [1_1_A_10_HoundsditchKids SoundNodeWave]
-Subtitles[0]=(Text="Head's in pieces, no doubt. True nutter, you are.")
+Subtitles[0]=(Text="Sua cabeça tá em pedaços, sem dúvida. Você é realmente lelé.")
 
 [1_1_A_1_HoundsditchKids SoundNodeWave]
-Subtitles[0]=(Text="Our bed's a mess!")
+Subtitles[0]=(Text="Nossa cama tá uma bagunça!")
 
 [1_1_A_2_HoundsditchKids SoundNodeWave]
-Subtitles[0]=(Text="Ollie pinched my smalls.")
+Subtitles[0]=(Text="Ollie beliscou minha cueca.")
 
 [1_1_A_3_HoundsditchKids SoundNodeWave]
-Subtitles[0]=(Text="Aw, the loo smells awful!")
+Subtitles[0]=(Text="Nossa, o banheiro tá fedendo horrores!")
 
 [1_1_A_4_HoundsditchKids SoundNodeWave]
-Subtitles[0]=(Text="Doctor do you right, still sick in the head?")
+Subtitles[0]=(Text="O doutor te ajudou? Ainda tá louca da cabeça?")
 
 [1_1_A_5_HoundsditchKids SoundNodeWave]
-Subtitles[0]=(Text="What's wrong now?")
+Subtitles[0]=(Text="Qual o problema agora?")
 
 [1_1_A_6_HoundsditchKids SoundNodeWave]
-Subtitles[0]=(Text="Do something, anything!")
+Subtitles[0]=(Text="Faça algo, qualquer coisa!")
 
 [1_1_A_7_HoundsditchKids SoundNodeWave]
-Subtitles[0]=(Text="Rutledge replace your loose screws? No whining, right?")
+Subtitles[0]=(Text="Apertaram seus parafusos soltos em Rutledge? Sem birra, né?")
 
 [1_1_A_8_HoundsditchKids SoundNodeWave]
-Subtitles[0]=(Text="Wasting Doctor's time?")
+Subtitles[0]=(Text="Atrapalhando o Doutor?")
 
 [1_1_A_9_HoundsditchKids SoundNodeWave]
-Subtitles[0]=(Text="Topped the family again, did you? Muck up the rescue?")
+Subtitles[0]=(Text="Perdeu sua família de novo? Não conseguiu salvá-los dessa vez?")
 
 [1_1_D_Krook SoundNodeWave]
-Subtitles[0]=(Text="10 years in the looney bin.")
+Subtitles[0]=(Text="10 anos no hospício.")
 
 [1_1_E_Dred SoundNodeWave]
-Subtitles[0]=(Text="No ma. No relations. She's an orphan.")
+Subtitles[0]=(Text="Sem mãe. Sem parentesco. Ela é órfã.")
 
 [1_1_F_Misery SoundNodeWave]
 Subtitles[0]=(Text="Whose fault is that?")
 
 [1_1_H_Dred SoundNodeWave]
-Subtitles[0]=(Text="Killed her family!")
+Subtitles[0]=(Text="Matou a própria família!")
 
 [1_1_H_Dred_sfx_cin_rb SoundNodeWave]
-Subtitles[0]=(Text="Killed her family!",Time=2.000000)
+Subtitles[0]=(Text="Matou a própria família!",Time=2.000000)
 
 [1_1_J_Krook SoundNodeWave]
-Subtitles[0]=(Text="Doctor's pet.")
+Subtitles[0]=(Text="Queridinha do doutor.")
 
 [1_1_K_Dred SoundNodeWave]
-Subtitles[0]=(Text="Too good for the asylum.")
+Subtitles[0]=(Text="Boa demais para o hospício.")
 
 [1_1_L_Misery SoundNodeWave]
 Subtitles[0]=(Text="She got a fella?")
 
 [1_1_M_Krook SoundNodeWave]
-Subtitles[0]=(Text="Who'd want her?")
+Subtitles[0]=(Text="Quem iria querer ela?")
 
 [1_1_N_Dred SoundNodeWave]
-Subtitles[0]=(Text="Mad as a hatter, without the charm.")
+Subtitles[0]=(Text="Maluca como um Chapeleiro, sem o charme.")
 
 [1_1_O_1_HoundsditchKids SoundNodeWave]
-Subtitles[0]=(Text="She ever work?")
+Subtitles[0]=(Text="Ela trabalhou alguma vez?")
 
 [1_1_O_2_HoundsditchKids SoundNodeWave]
-Subtitles[0]=(Text="Where's her plaque? ")
+Subtitles[0]=(Text="Cadê a placa dela?")
 
 [1_1_O_3_HoundsditchKids SoundNodeWave]
-Subtitles[0]=(Text="Too good for company?")
+Subtitles[0]=(Text="Boa demais pra socializar?")
 
 [1_1_O_4_HoundsditchKids SoundNodeWave]
-Subtitles[0]=(Text="She don't get close.")
+Subtitles[0]=(Text="Ela nem chega perto.")
 
 [1_1_O_5_HoundsditchKids SoundNodeWave]
-Subtitles[0]=(Text="Hates being touched.")
+Subtitles[0]=(Text="Odeia que toquem nela.")
 
 [1_1_O_6_HoundsditchKids SoundNodeWave]
-Subtitles[0]=(Text="Who likes it, then?")
+Subtitles[0]=(Text="E quem é que gosta?")
 
 [1_1_O_7_HoundsditchKids SoundNodeWave]
-Subtitles[0]=(Text="Never slapped?")
+Subtitles[0]=(Text="Nunca apanhou?")
 
 [1_1_O_8_HoundsditchKids SoundNodeWave]
-Subtitles[0]=(Text="Spanked, more like.")
+Subtitles[0]=(Text="Deve ter recebido palmadas.")
 
