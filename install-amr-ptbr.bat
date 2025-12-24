@@ -7,8 +7,8 @@ set "BASE_DIR=%CD%"
 popd
 
 set ORIGINAL=%BASE_DIR%\CookedPC
-set TRANSLATION=%BASE_DIR%\AMR-PTBR\BRA\CookedPC
-set BRA=%BASE_DIR%\AMR-PTBR\BRA\Localization
+set TRANSLATION=%BASE_DIR%\amr-ptbr-translation\BRA\CookedPC
+set BRA=%BASE_DIR%\amr-ptbr-translation\BRA\Localization
 set ENG=%BASE_DIR%\Localization
 
 echo =========================================
