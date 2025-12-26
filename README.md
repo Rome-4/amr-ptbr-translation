@@ -7,7 +7,7 @@ Espero que todos que baixarem esta tradução e jogarem o game aproveitem e gost
 ## ⚙️ Como instalar?
 > **Esta tradução foi feita com base na versão Steam de Alice Madness Returns.<br> Porém, desde que a estrutura de pastas se mantenha, é possível realizar a instalação em outras plataformas.**
 
-<br><br>1. Baixe o arquivo a partir daqui: [amr-ptbr-translation.zip](https://github.com/Rome-4/amr-ptbr-translation/releases/download/v0.5.0/amr-ptbr-translation.zip). <br>
+<br><br>1. Baixe o arquivo a partir daqui: [amr-ptbr-translation.zip](https://github.com/Rome-4/amr-ptbr-translation/releases/latest/download/amr-ptbr-translation.zip). <br>
 
 <br>2. Selecione o caminho abaixo para baixar o ZIP
 
