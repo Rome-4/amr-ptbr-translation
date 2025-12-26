@@ -42,7 +42,7 @@ echo Applying translation files...
 xcopy /y "%BRA%\*.int" "%ENG%\INT"
 
 :: Iterate all *_LOC_INT.upk files
-for /R "%TRANSLATION%" %%F in (*_LOC_INT.upk) do (
+for /R "%TRANSLATION%" %%F in (*.upk) do (
 
     :: Modded CookedPC relative location
     set "FILE=%%F"

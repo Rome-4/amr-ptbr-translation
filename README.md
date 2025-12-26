@@ -37,8 +37,10 @@ Ele melhora bastante a experiência do jogo e resolve muitos problemas. Além de
 
 ## ❕Créditos
 Para essa tradução foram utilizadas as seguintes ferramentas:
-- Google Tradutor (Com revisão manual e adequação ao contexto)
-- UPK Explorer (Edição de arquivos Cooked .upk)
+- [Google Tradutor](https://translate.google.com/) (Com revisão manual e adequação ao contexto)
+- [UPK Explorer](https://www.nexusmods.com/site/mods/587) (Edição de arquivos Cooked .upk)
+- [FontForge Open Source Font Editor](https://fontforge.org/en-US/) (Edição da fonte do jogo em .ttf)
+- [JPEXS Free Flash Decompiler](https://github.com/jindrapetrik/jpexs-decompiler) (Extração da fonte do jogo em .swf)
 - Pesquisa e muita criatividade 🙂
 
 ### _Aproveite o País das Maravilhas!_ 
