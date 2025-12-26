@@ -32,7 +32,9 @@ if not exist "%TRANSLATION%" (
 if not exist "%ENG%\INT_BKP" (
     echo Creating backup of the original files...
     mkdir "%ENG%\INT_BKP"
-    copy "%ENG%\INT\*.int" "%ENG%\INT_BKP"
+    copy "%ENG%\INT\AliceGame.int" "%ENG%\INT_BKP"
+    copy "%ENG%\INT\GFxUI.int" "%ENG%\INT_BKP"
+    copy "%ENG%\INT\Subtitles.int" "%ENG%\INT_BKP"
 )
 
 :: Copying the translated .int files
@@ -72,4 +74,3 @@ echo ==================================
 echo Patch PT-BR instalado com sucesso!
 echo ==================================
 pause
-

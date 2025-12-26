@@ -46,4 +46,3 @@ echo =================================
 echo Patch PT-BR removido com sucesso!
 echo =================================
 pause
-
