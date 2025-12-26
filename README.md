@@ -29,12 +29,12 @@ C:\Program Files (x86)\Steam\steamapps\common\Alice Madness Returns\AliceGame
 ## 🚫 Como desinstalar?
 O processo para desinstalar a tradução (voltar ao original) consiste em apenas rodar o script _uninstall-amr-ptbr.bat_ <br>
 Ele recuperará os backups dos arquivos em inglês de volta à pasta de origem. <br>
-> OBS: Se preferir e achar mais assertivo, você pode pedir uma verificação da integridade dos arquivos no menu da Steam. Isso também fará os arquivos originais serem baixados novamente.
+> OBS: Se achar mais assertivo, você pode pedir uma verificação da integridade dos arquivos no menu da Steam. Isso também fará os arquivos originais serem baixados novamente.
 <br>
 
 ## 💡 Sugestão
 Recomendo fortemente instalar o [MadnessPatch](https://github.com/Wemino/MadnessPatch) feito por Wemino junto a essa tradução.<br>
-Ele melhora bastante a experiência do jogo e resolve muitos problemas de performance. Além de adicionar conteúdo extra.
+Ele melhora bastante a experiência do jogo e resolve muitos problemas. Além de adicionar conteúdo extra.
 <br><br>
 
 ## ❕Créditos
