@@ -16,7 +16,7 @@ C:\Program Files (x86)\Steam\steamapps\common\Alice Madness Returns\AliceGame
 ```
 
 <br>3. Extraia o arquivo ZIP para uma pasta
-<img width="788" height="536" alt="image" src="https://github.com/user-attachments/assets/eed54ffd-526f-4fa0-b20d-ed2d357e0be6" />
+<img width="797" height="540" alt="image" src="https://github.com/user-attachments/assets/1785c5ef-f71d-4d42-87d4-bf7f6b723c1c" />
 
 <br>4. Acesse a nova pasta criada e execute o script _install-amr-ptbr.bat_
 <img width="788" height="190" alt="image" src="https://github.com/user-attachments/assets/33ca1272-9c23-445f-ade2-1fd77e1803ed" />
