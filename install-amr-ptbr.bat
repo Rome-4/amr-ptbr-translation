@@ -1,121 +1,160 @@
 @echo off
 setlocal EnableDelayedExpansion
+chcp 65001 >nul
+title Alice: Madness Returns - Instalador PT-BR
 
 echo =========================================
 echo Instalando PT-BR - Alice Madness Returns
 echo =========================================
 echo.
 
-:: STEP 1
-set "STEAM_PATH="
-for /f "skip=2 tokens=1,2,*" %%A in ('reg query "HKCU\SOFTWARE\Valve\Steam" /v "SteamPath" 2^>nul') do (
-    if /i "%%A"=="SteamPath" set "STEAM_PATH=%%C"
-)
-if not defined STEAM_PATH (
-    for /f "skip=2 tokens=1,2,*" %%A in ('reg query "HKLM\SOFTWARE\Valve\Steam" /v "SteamPath" 2^>nul') do (
-        if /i "%%A"=="SteamPath" set "STEAM_PATH=%%C"
-    )
-)
-if not defined STEAM_PATH (
-    for /f "skip=2 tokens=1,2,*" %%A in ('reg query "HKLM\SOFTWARE\WOW6432Node\Valve\Steam" /v "SteamPath" 2^>nul') do (
-        if /i "%%A"=="SteamPath" set "STEAM_PATH=%%C"
-    )
-)
-call :normalize_path STEAM_PATH
-echo [1] STEAM_PATH = "%STEAM_PATH%"
+:: Translation files are next to this script.
+set "SOURCE=%~dp0BRA"
+set "TRANSLATION=%SOURCE%\CookedPC"
+set "LOCALIZATION=%SOURCE%\Localization"
 
-:: STEP 2
-set "GAME_DIR="
-if exist "%STEAM_PATH%\steamapps\common\Alice Madness Returns\AliceGame\" (
-    set "GAME_DIR=%STEAM_PATH%\steamapps\common\Alice Madness Returns\AliceGame"
+if not exist "%TRANSLATION%" (
+    echo ERRO: Pasta BRA\CookedPC nao encontrada.
+    pause
+    exit /b 1
 )
-echo [2] GAME_DIR = "%GAME_DIR%"
 
-:: STEP 3
+if not exist "%LOCALIZATION%\AliceGame.int" (
+    echo ERRO: Arquivos de traducao nao encontrados em BRA\Localization.
+    pause
+    exit /b 1
+)
+
+:: Find the game in Steam.
+call :find_game
+if not defined GAME_DIR (
+    echo.
+    echo Nao foi possivel localizar Alice Madness Returns automaticamente.
+    echo Selecione a pasta AliceGame na proxima janela.
+    for /f "usebackq delims=" %%P in (`powershell -NoProfile -ExecutionPolicy Bypass -Command "Add-Type -AssemblyName System.Windows.Forms; $d=New-Object System.Windows.Forms.FolderBrowserDialog; $d.Description='Selecione a pasta AliceGame'; if($d.ShowDialog() -eq 'OK'){ $d.SelectedPath }"`) do set "GAME_DIR=%%P"
+)
+
+if not defined GAME_DIR (
+    echo ERRO: Nenhuma pasta selecionada.
+    pause
+    exit /b 1
+)
+
 set "ORIGINAL=%GAME_DIR%\CookedPC"
-set "TRANSLATION=%~dp0BRA\CookedPC"
-set "BRA=%~dp0BRA\Localization"
 set "ENG=%GAME_DIR%\Localization"
-if "%TRANSLATION:~-1%"=="\" set "TRANSLATION=%TRANSLATION:~0,-1%"
-echo [3] ORIGINAL     = "%ORIGINAL%"
-echo [3] TRANSLATION  = "%TRANSLATION%"
-echo [3] BRA          = "%BRA%"
-echo [3] ENG          = "%ENG%"
+set "INT=%ENG%\INT"
+set "BACKUP=%ENG%\INT_BKP"
 
-:: STEP 3 - validations
-if not exist "%TRANSLATION%\" (
-    echo [ERRO] TRANSLATION nao existe!
+if not exist "%ORIGINAL%" (
+    echo ERRO: A pasta selecionada nao parece ser AliceGame.
     pause
     exit /b 1
 )
-echo [3] TRANSLATION existe!
-pause
 
-if not exist "%BRA%\" (
-    echo [ERRO] BRA nao existe!
+if not exist "%INT%" (
+    echo ERRO: A pasta Localization\INT nao foi encontrada.
     pause
     exit /b 1
 )
-echo [3] BRA existe!
 
-:: STEP 4
-if not exist "%ENG%\INT_BKP\" (
-    echo [4] Criando backup...
-    mkdir "%ENG%\INT_BKP"
-    for %%F in (AliceGame.int GFxUI.int Subtitles.int) do (
-        if exist "%ENG%\INT\%%F" copy "%ENG%\INT\%%F" "%ENG%\INT_BKP\" >nul
-    )
-    echo [4] Backup criado.
-) else (
-    echo [4] Backup ja existe.
+if exist "%BACKUP%" (
+    echo ERRO: O backup INT_BKP ja existe.
+    echo Desinstale a traducao antes de instalar novamente.
+    pause
+    exit /b 1
 )
 
-:: STEP 5
-echo [5] Copiando .int...
-xcopy /y "%BRA%\*.int" "%ENG%\INT\" >nul
-echo [5] .int copiados.
+echo Jogo encontrado em:
+echo "%GAME_DIR%"
+echo.
+echo Um backup dos arquivos originais sera criado em:
+echo "%BACKUP%"
+echo.
 
-:: STEP 6
-echo [6] Calculando tamanho do prefixo...
-set "TRANS_LEN=0"
-set "TEMP_STR=%TRANSLATION%\"
-:count_loop
-if not "!TEMP_STR!"=="" (
-    set "TEMP_STR=!TEMP_STR:~1!"
-    set /a TRANS_LEN+=1
-    goto :count_loop
+choice /c SN /n /m "Continuar? [S/N] "
+if errorlevel 2 exit /b 0
+
+:: Backup the original English localization.
+echo Criando backup da localizacao original...
+mkdir "%BACKUP%"
+copy /y "%INT%\*.int" "%BACKUP%\" >nul
+
+if errorlevel 1 (
+    echo ERRO: Nao foi possivel criar o backup.
+    rmdir /s /q "%BACKUP%" 2>nul
+    pause
+    exit /b 1
 )
-echo [6] TRANS_LEN = %TRANS_LEN%
 
-echo [6] Copiando .upk...
-set "COUNT=0"
+:: Copy translated localization.
+echo Aplicando arquivos de traducao...
+copy /y "%LOCALIZATION%\*.int" "%INT%\" >nul
+
+if errorlevel 1 (
+    echo ERRO: Falha ao copiar os arquivos de traducao.
+    echo Restaurando o backup...
+    copy /y "%BACKUP%\*.int" "%INT%\" >nul
+    rmdir /s /q "%BACKUP%" 2>nul
+    pause
+    exit /b 1
+)
+
+:: Copy translated UPK files, preserving the folder structure.
 for /R "%TRANSLATION%" %%F in (*.upk) do (
     set "FILE=%%F"
-    set "REL=!FILE:~%TRANS_LEN%!"
+    set "REL=!FILE:%TRANSLATION%\=!"
     set "TARGET=%ORIGINAL%\!REL!"
-    for %%D in ("!TARGET!") do (
-        if not exist "%%~dpD\" mkdir "%%~dpD"
+
+    for %%D in ("!TARGET!") do if not exist "%%~dpD" mkdir "%%~dpD"
+
+    :: Keep the original file only once.
+    if exist "!TARGET!" if not exist "!TARGET!.bak" (
+        copy /y "!TARGET!" "!TARGET!.bak" >nul
     )
-    if exist "!TARGET!" (
-        if not exist "!TARGET!.bak" copy "!TARGET!" "!TARGET!.bak" >nul
-    )
-    copy /Y "%%F" "!TARGET!" >nul
-    set /a COUNT+=1
-    echo   [!COUNT!] !REL!
+
+    copy /y "%%F" "!TARGET!" >nul
+    echo Instalado: !REL!
 )
-echo [6] Concluido. Total: %COUNT%
 
 echo.
 echo ==================================
 echo Patch PT-BR instalado com sucesso!
 echo ==================================
+echo.
+echo Para remover a traducao, execute:
+echo uninstall-amr-ptbr.bat
 pause
 exit /b 0
 
-:normalize_path
-set "%~1=!%~1:/=\!"
-:normalize_loop
-set "_before=!%~1!"
-set "%~1=!%~1:\\=\!"
-if not "!%~1!"=="!_before!" goto :normalize_loop
+
+:find_game
+set "STEAM="
+set "GAME_DIR="
+
+:: Main Steam installation from the registry.
+for /f "tokens=2,*" %%A in ('reg query "HKCU\Software\Valve\Steam" /v SteamPath 2^>nul ^| find /i "SteamPath"') do set "STEAM=%%B"
+if not defined STEAM for /f "tokens=2,*" %%A in ('reg query "HKLM\Software\WOW6432Node\Valve\Steam" /v InstallPath 2^>nul ^| find /i "InstallPath"') do set "STEAM=%%B"
+
+if not defined STEAM exit /b 0
+set "STEAM=%STEAM:/=\%"
+
+:: First try the default Steam library.
+if exist "%STEAM%\steamapps\common\Alice Madness Returns\AliceGame\CookedPC" (
+    set "GAME_DIR=%STEAM%\steamapps\common\Alice Madness Returns\AliceGame"
+    exit /b 0
+)
+
+:: Then check additional Steam libraries listed in libraryfolders.vdf.
+set "VDF=%STEAM%\steamapps\libraryfolders.vdf"
+if exist "%VDF%" (
+    for /f "tokens=2,*" %%A in ('findstr /i /c:"\"path\"" "%VDF%" 2^>nul') do (
+        set "LIB=%%B"
+        set "LIB=!LIB:"=!"
+        set "LIB=!LIB:/=\!"
+        if exist "!LIB!\steamapps\common\Alice Madness Returns\AliceGame\CookedPC" (
+            set "GAME_DIR=!LIB!\steamapps\common\Alice Madness Returns\AliceGame"
+            exit /b 0
+        )
+    )
+)
 exit /b 0
